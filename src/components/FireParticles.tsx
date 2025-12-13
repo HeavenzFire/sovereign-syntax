@@ -12,7 +12,7 @@ const FireParticles = () => {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const newParticles: Particle[] = Array.from({ length: 30 }, (_, i) => ({
+    const newParticles: Particle[] = Array.from({ length: 25 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
       delay: Math.random() * 8,
@@ -35,7 +35,7 @@ const FireParticles = () => {
             height: `${particle.size}px`,
             animation: `float-up ${particle.duration}s ease-out infinite`,
             animationDelay: `${particle.delay}s`,
-            boxShadow: `0 0 ${particle.size * 2}px hsl(var(--fire-gold) / 0.8)`,
+            boxShadow: `0 0 ${particle.size * 2}px hsl(38 90% 55% / 0.8)`,
           }}
         />
       ))}
